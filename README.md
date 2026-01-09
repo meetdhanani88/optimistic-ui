@@ -2,7 +2,7 @@
 
 > A tiny, type-safe toolkit that eliminates boilerplate for optimistic UI updates using TanStack Query.
 
-[![npm version](https://img.shields.io/npm/v/optimistic-ui.svg)](https://www.npmjs.com/package/optimistic-ui)
+[![npm version](https://img.shields.io/npm/v/optimistic-ui.svg)](https://www.npmjs.com/package/@meetdhanani/optimistic-ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## What is Optimistic UI?
@@ -199,11 +199,12 @@ function TodoList() {
 - `restoreDeletedItem<T>` - Helper to restore deleted items (for undo functionality)
 
 **Types:**
-- `OptimisticCreateOptions<T>`
-- `OptimisticUpdateOptions<T>`
-- `OptimisticDeleteOptions<T>`
-- `OptimisticDeleteWithUndoOptions<T>`
-- `OptimisticContext<T>`
+- [`OptimisticCreateOptions<T>`](./src/types.ts#L17-L19) - Options for optimistic create operations
+- [`OptimisticUpdateOptions<T>`](./src/types.ts#L21-L23) - Options for optimistic update operations
+- [`OptimisticDeleteOptions<T>`](./src/types.ts#L25-L27) - Options for optimistic delete operations
+- [`OptimisticDeleteWithUndoOptions<T>`](./src/types.ts#L29-L32) - Options for optimistic delete with undo operations
+- [`OptimisticContext<T>`](./src/types.ts#L34) - Context returned from optimistic mutations for rollback
+- [`UndoContext<T>`](./src/optimistic-delete-with-undo.ts#L26-L33) - Extended context for undo operations (includes deletedItem, timeoutId, committed)
 
 ### Hooks (Recommended)
 
@@ -655,6 +656,8 @@ This repository includes working examples to help you get started:
 
 ### React Example
 
+**🌐 [View Live Demo](https://optimistic-ui-react.netlify.app/)**
+
 ```bash
 # Install dependencies (from root)
 pnpm install
@@ -677,6 +680,8 @@ pnpm dev
 - ✅ Error handling and rollback
 
 ### Infinite Query Example
+
+**🌐 [View Live Demo](https://optimistic-ui-infinite-query.netlify.app/)**
 
 ```bash
 cd examples/infinite-query
@@ -779,68 +784,6 @@ const mutation = useMutation(
 - ✅ **Undo Cancellation** - Properly cleans up timeouts and restores state
 - ✅ **SSR Safety** - Prevents hydration mismatches
 - ✅ **Stale Cache** - Preserves referential integrity
-
-## Testing
-
-### Quick Testing with Examples
-
-The fastest way to test the library is using the provided examples:
-
-```bash
-# Run the React example
-cd examples/react
-pnpm install
-pnpm dev
-
-# Or from root:
-pnpm dev:examples
-```
-
-Then open `http://localhost:5173` and manually test:
-- ✅ Creating items (should appear immediately)
-- ✅ Updating items (should update immediately)
-- ✅ Deleting items (should disappear immediately)
-- ✅ Error handling (simulate network errors)
-
-### Testing Checklist
-
-#### Core Functionality
-- [ ] **Create**: Item appears immediately in cache
-- [ ] **Create**: Temporary ID replaced with server ID on success
-- [ ] **Create**: Item removed on error (rollback)
-- [ ] **Update**: Item updates immediately in cache
-- [ ] **Update**: Changes persist on success
-- [ ] **Update**: Changes reverted on error (rollback)
-- [ ] **Delete**: Item removed immediately from cache
-- [ ] **Delete**: Item restored on error (rollback)
-- [ ] **Delete with Undo**: Item removed, can be restored before timeout
-
-#### Edge Cases
-- [ ] **Concurrent mutations**: Multiple mutations don't conflict
-- [ ] **Empty cache**: Works when cache is empty
-- [ ] **Infinite queries**: Works with `useInfiniteQuery`
-- [ ] **Pagination**: Items added to correct page
-- [ ] **Custom getId**: Works with custom ID getter
-- [ ] **Error handling**: Network errors properly handled
-- [ ] **SSR**: No hydration mismatches
-
-#### Type Safety
-- [ ] TypeScript compiles without errors
-- [ ] Types are exported correctly
-- [ ] Generic types work correctly
-- [ ] IntelliSense works in IDE
-
-### Common Issues
-
-**Cache not updating?**
-- Check that `queryKey` matches exactly
-- Verify QueryClientProvider is set up
-- Check browser console for errors
-
-**Types not working?**
-- Rebuild: `pnpm build`
-- Restart TypeScript server in IDE
-- Check `dist/index.d.ts` exists
 
 ## Requirements
 

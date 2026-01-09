@@ -2,7 +2,7 @@
 
 > A tiny, type-safe toolkit that eliminates boilerplate for optimistic UI updates using TanStack Query.
 
-[![npm version](https://img.shields.io/npm/v/optimistic-ui.svg)](https://www.npmjs.com/package/optimistic-ui)
+[![npm version](https://img.shields.io/npm/v/optimistic-ui.svg)](https://www.npmjs.com/package/@meetdhanani/optimistic-ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## What is Optimistic UI?
@@ -656,6 +656,8 @@ This repository includes working examples to help you get started:
 
 ### React Example
 
+**🌐 [View Live Demo](https://optimistic-ui-react.netlify.app/)**
+
 ```bash
 # Install dependencies (from root)
 pnpm install
@@ -678,6 +680,8 @@ pnpm dev
 - ✅ Error handling and rollback
 
 ### Infinite Query Example
+
+**🌐 [View Live Demo](https://optimistic-ui-infinite-query.netlify.app/)**
 
 ```bash
 cd examples/infinite-query
