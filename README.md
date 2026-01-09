@@ -245,13 +245,6 @@ function TodoList() {
 - `optimisticDeleteWithUndo<T>` / `optimisticDeleteWithUndoWithClient<T>` - Delete items with undo
 - `restoreDeletedItem<T>` - Helper to restore deleted items (for undo functionality)
 
-**Types:**
-- [`OptimisticCreateOptions<T>`](./src/types.ts#L17-L19) - Options for optimistic create operations
-- [`OptimisticUpdateOptions<T>`](./src/types.ts#L21-L23) - Options for optimistic update operations
-- [`OptimisticDeleteOptions<T>`](./src/types.ts#L25-L27) - Options for optimistic delete operations
-- [`OptimisticDeleteWithUndoOptions<T>`](./src/types.ts#L29-L32) - Options for optimistic delete with undo operations
-- [`OptimisticContext<T>`](./src/types.ts#L34) - Context returned from optimistic mutations for rollback
-- [`UndoContext<T>`](./src/optimistic-delete-with-undo.ts#L26-L33) - Extended context for undo operations (includes deletedItem, timeoutId, committed)
 
 ### Hooks (Recommended)
 
