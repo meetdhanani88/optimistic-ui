@@ -5,6 +5,8 @@
 [![npm version](https://img.shields.io/npm/v/optimistic-ui.svg)](https://www.npmjs.com/package/@meetdhanani/optimistic-ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+**📦 [npm](https://www.npmjs.com/package/@meetdhanani/optimistic-ui) • [GitHub](https://github.com/meetdhanani88/optimistic-ui)**
+
 ## What is Optimistic UI?
 
 **Optimistic UI** is a UX pattern where the UI updates immediately when a user performs an action, before the server confirms the change. This creates a snappy, responsive feel that makes applications feel instant and modern.
@@ -803,4 +805,4 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## Support
 
-If you encounter any issues or have questions, please open an issue on GitHub.
+If you encounter any issues or have questions, please open an issue on [GitHub](https://github.com/meetdhanani88/optimistic-ui/issues).
