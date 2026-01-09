@@ -792,7 +792,6 @@ const mutation = useMutation(
 
 - React 18+
 - TanStack Query v5+
-- TypeScript 5+ (recommended)
 
 ## License
 
