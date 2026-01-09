@@ -2,7 +2,6 @@
 
 > A tiny, type-safe toolkit that eliminates boilerplate for optimistic UI updates using TanStack Query.
 
-[![npm version](https://img.shields.io/npm/v/optimistic-ui.svg)](https://www.npmjs.com/package/@meetdhanani/optimistic-ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **📦 [npm](https://www.npmjs.com/package/@meetdhanani/optimistic-ui) • [GitHub](https://github.com/meetdhanani88/optimistic-ui)**
