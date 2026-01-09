@@ -58,6 +58,52 @@ Instead of copying and pasting 150 lines of code for each mutation, you can now 
 - 📦 **Type-Safe** - Full TypeScript support with excellent DX
 - 🎯 **Zero Boilerplate** - Eliminates repetitive optimistic update code
 
+## Running Examples
+
+This repository includes working examples to help you get started:
+
+### React Example
+
+**🌐 [View Live Demo](https://optimistic-ui-react.netlify.app/)**
+
+```bash
+# Install dependencies (from root)
+pnpm install
+
+# Run the React example
+pnpm dev:examples
+
+# Or from the example directory:
+cd examples/react
+pnpm install
+pnpm dev
+```
+
+**Important:** This monorepo uses **pnpm workspaces**. You must use `pnpm`, not `npm` or `yarn`. The `workspace:*` protocol in `package.json` is a pnpm feature.
+
+**What the React example shows:**
+- ✅ Optimistic create (items appear immediately)
+- ✅ Optimistic update (changes apply immediately)
+- ✅ Optimistic delete (items disappear immediately)
+- ✅ Error handling and rollback
+
+### Infinite Query Example
+
+**🌐 [View Live Demo](https://optimistic-ui-infinite-query.netlify.app/)**
+
+```bash
+cd examples/infinite-query
+pnpm install
+pnpm dev
+```
+
+**What the infinite query example shows:**
+- ✅ Optimistic updates with paginated data
+- ✅ Real API integration (JSONPlaceholder)
+- ✅ Handling object-based page structures
+- ✅ Error simulation and rollback
+
+
 ## Installation
 
 ```bash
@@ -650,50 +696,6 @@ function TodoWithUndo() {
 }
 ```
 
-## Running Examples
-
-This repository includes working examples to help you get started:
-
-### React Example
-
-**🌐 [View Live Demo](https://optimistic-ui-react.netlify.app/)**
-
-```bash
-# Install dependencies (from root)
-pnpm install
-
-# Run the React example
-pnpm dev:examples
-
-# Or from the example directory:
-cd examples/react
-pnpm install
-pnpm dev
-```
-
-**Important:** This monorepo uses **pnpm workspaces**. You must use `pnpm`, not `npm` or `yarn`. The `workspace:*` protocol in `package.json` is a pnpm feature.
-
-**What the React example shows:**
-- ✅ Optimistic create (items appear immediately)
-- ✅ Optimistic update (changes apply immediately)
-- ✅ Optimistic delete (items disappear immediately)
-- ✅ Error handling and rollback
-
-### Infinite Query Example
-
-**🌐 [View Live Demo](https://optimistic-ui-infinite-query.netlify.app/)**
-
-```bash
-cd examples/infinite-query
-pnpm install
-pnpm dev
-```
-
-**What the infinite query example shows:**
-- ✅ Optimistic updates with paginated data
-- ✅ Real API integration (JSONPlaceholder)
-- ✅ Handling object-based page structures
-- ✅ Error simulation and rollback
 
 ## Migration Guide
 
