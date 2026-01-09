@@ -48,7 +48,7 @@ export function TodoList() {
     return todo;
   };
 
-  const deleteTodo = async (id: string | number): Promise<void> => {
+  const deleteTodo = async (): Promise<void> => {
     await new Promise((resolve) => setTimeout(resolve, 600));
     
     // Simulate API failure
