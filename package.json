@@ -1,6 +1,6 @@
 {
   "name": "optimistic-ui",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "private": true,
   "description": "A tiny, type-safe toolkit that eliminates boilerplate for optimistic UI updates using TanStack Query",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@meetdhanani/optimistic-ui-core",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "Framework-agnostic core logic for optimistic UI updates",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
