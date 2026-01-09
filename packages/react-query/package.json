@@ -1,0 +1,44 @@
+{
+  "name": "@meetdhanani/optimistic-ui",
+  "version": "0.1.2",
+  "description": "A tiny, type-safe toolkit that eliminates boilerplate for optimistic UI updates using TanStack Query",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --external @tanstack/react-query",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch --external @tanstack/react-query",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.0.0"
+  },
+  "dependencies": {
+    "@meetdhanani/optimistic-ui-core": "^0.1.2"
+  },
+  "keywords": [
+    "optimistic-ui",
+    "tanstack-query",
+    "react-query",
+    "optimistic-updates",
+    "typescript"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@tanstack/react-query": "^5.17.0",
+    "@types/react": "^18.2.45",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
+
